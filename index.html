@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Sohail | Full Stack Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Md Sohail, a premium Full Stack Developer specializing in React.js, Java, Spring Boot, MySQL, and modern web technologies.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Ambient Glowing Backgrounds -->
+    <div class="bg-grid"></div>
+    <canvas id="bg-particles"></canvas>
+    <div class="ambient-glow glow-primary"></div>
+    <div class="ambient-glow glow-secondary"></div>
+    <div class="ambient-glow glow-accent"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">SOHAIL</span><span class="logo-dot">.</span>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#github" class="nav-link">GitHub</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-nav">Hire Me</a>
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-indicator"></span> Available for Opportunities
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text-primary">Md Sohail</span>
+                    </h1>
+                    <div class="typewriter-container">
+                        <span class="typewriter-text" id="typewriter">Full Stack Developer</span><span
+                            class="cursor-pipe">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Building premium, high-performance web applications. I bridge the gap between elegant user
+                        interfaces and robust backend architectures.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <div class="resume-btn-wrapper">
+                            <button class="btn btn-secondary" onclick="triggerResumeDownload()">
+                                <span>Download Resume</span> <i class="fa-solid fa-download"></i>
+                            </button>
+                            <a id="resume-download-link" href="images/Mohammed Sohail  Resume. (1).docx" download
+                                hidden></a>
+                            <div class="rocket-animation" id="rocket-anim">🚀</div>
+                        </div>
+                    </div>
+
+                    <!-- Social icons -->
+                    <div class="social-links-container">
+                        <span class="social-label">Connect with me:</span>
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="mailto:mdsohail7862002@gmail.com" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mdsohailshaikh_coder?igsh=MWgxYjJwNDg4a3A1eA=="
+                                target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-card-wrapper">
+                        <div class="profile-card glow-card">
+                            <div class="profile-card-inner">
+                                <div class="profile-image-container">
+                                    <!-- Fallback to image2.png with stylized mask/glow -->
+                                    <img src="images/image2.png" alt="Md Sohail Profile" class="profile-img">
+                                </div>
+                                <div class="profile-card-glow"></div>
+                            </div>
+                        </div>
+                        <!-- Floating graphic elements -->
+                        <div class="floating-element float-1"><i class="fa-brands fa-react text-react"></i></div>
+                        <div class="floating-element float-2"><i class="fa-brands fa-java text-java"></i></div>
+                        <div class="floating-element float-3"><i class="fa-brands fa-js text-js"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator" aria-label="Scroll to About">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow"></span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Discovery</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="about-image-card glow-card">
+                            <div class="about-image-inner">
+                                <img src="images/back.png" alt="Md Sohail Coding" class="about-img">
+                                <div class="about-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-details">
+                        <h3 class="about-tagline">Passionate Full Stack Developer & Problem Solver</h3>
+                        <p class="about-text">
+                            I am a detail-oriented Full Stack Developer holding a B.E. in Computer Science Engineering
+                            (2024). I specialize in building responsive, scalable, and secure applications using
+                            state-of-the-art technologies.
+                        </p>
+                        <p class="about-text">
+                            My expertise spans modern frontend frameworks like React.js alongside robust enterprise
+                            backend systems powered by Java and Spring Boot. I focus on writing clean, maintainable
+                            code, implementing microservices architectures, and optimizing databases for optimal
+                            throughput.
+                        </p>
+
+                        <div class="key-points-grid">
+                            <div class="key-point">
+                                <div class="point-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div>
+                                    <h4>B.E. Computer Science</h4>
+                                    <p>Graduated in 2024</p>
+                                </div>
+                            </div>
+                            <div class="key-point">
+                                <div class="point-icon"><i class="fa-solid fa-code-branch"></i></div>
+                                <div>
+                                    <h4>Full Stack Architect</h4>
+                                    <p>React, Java, Spring Boot</p>
+                                </div>
+                            </div>
+                            <div class="key-point">
+                                <div class="point-icon"><i class="fa-solid fa-database"></i></div>
+                                <div>
+                                    <h4>Database Design</h4>
+                                    <p>MySQL, Query Tuning</p>
+                                </div>
+                            </div>
+                            <div class="key-point">
+                                <div class="point-icon"><i class="fa-solid fa-brain"></i></div>
+                                <div>
+                                    <h4>Problem Solver</h4>
+                                    <p>Continuous Learner</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="stats-grid">
+                            <div class="stat-card spotlight-card">
+                                <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-card spotlight-card">
+                                <span class="stat-number" data-target="12">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label">Technologies Mastered</span>
+                            </div>
+                            <div class="stat-card spotlight-card">
+                                <span class="stat-number" data-target="1">0</span><span class="stat-plus"> Yr</span>
+                                <span class="stat-label">Experience</span>
+                            </div>
+                            <div class="stat-card spotlight-card">
+                                <span class="stat-number" data-target="350">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label">LeetCode Solved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Expertise</span>
+                    <h2 class="section-title">My Tech Stack</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="skills-grid">
+
+                    <!-- Frontend -->
+                    <div class="skills-category-card spotlight-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-code text-cyan"></i></div>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">React.js</span><span
+                                        class="skill-percentage">90%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">JavaScript (ES6+)</span><span
+                                        class="skill-percentage">85%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Tailwind CSS</span><span
+                                        class="skill-percentage">95%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">HTML5</span><span
+                                        class="skill-percentage">95%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">CSS3</span><span
+                                        class="skill-percentage">90%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Bootstrap</span><span
+                                        class="skill-percentage">80%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">GSAP</span><span
+                                        class="skill-percentage">75%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skills-category-card spotlight-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-server text-pink"></i></div>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Core Java</span><span
+                                        class="skill-percentage">90%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Spring Boot</span><span
+                                        class="skill-percentage">85%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">REST APIs</span><span
+                                        class="skill-percentage">85%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Hibernate</span><span
+                                        class="skill-percentage">80%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Advanced Java</span><span
+                                        class="skill-percentage">80%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="skills-category-card spotlight-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-database text-accent"></i></div>
+                            <h3>Database</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">MySQL</span><span
+                                        class="skill-percentage">85%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skills-category-card spotlight-card">
+                        <div class="category-header">
+                            <div class="category-icon"><i class="fa-solid fa-toolbox text-yellow"></i></div>
+                            <h3>Tools</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">Git</span><span
+                                        class="skill-percentage">88%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">GitHub</span><span
+                                        class="skill-percentage">85%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info"><span class="skill-name">VS Code</span><span
+                                        class="skill-percentage">90%</span></div>
+                                <div class="skill-bar-bg">
+                                    <div class="skill-bar-fill" style="width: 0%;" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1: BNB Accounting -->
+                    <article class="project-card spotlight-card">
+                        <div class="project-visual">
+                            <img src="project images/BNB.png" alt="BNB Accounting Dubai Screenshot" class="project-img">
+                            <div class="project-visual-glow"></div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-meta">
+                                <span class="project-badge">Corporate Project</span>
+                                <div class="project-tech-badges">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Vercel</span>
+                                </div>
+                            </div>
+                            <h3 class="project-title">BNB Accounting</h3>
+                            <p class="project-desc">
+                                A high-end, responsive corporate web portal developed for a leading Dubai-based
+                                accounting firm. Showcases commercial tax, audit, and business advisory services with
+                                smooth scrolling, crisp design, and intuitive UX navigation.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://bnb-accounting-dubai.vercel.app/" target="_blank"
+                                    rel="noopener noreferrer" class="btn-link">
+                                    Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="https://github.com/Shaikh-Sohail991/-BNB-Accounting-Dubai-Modify"
+                                    target="_blank" rel="noopener noreferrer" class="btn-link secondary">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Movie Explorer -->
+                    <article class="project-card spotlight-card">
+                        <div class="project-visual">
+                            <img src="project images/iphone website clone.png" alt="Movie Explorer Screenshot"
+                                class="project-img">
+                            <div class="project-visual-glow"></div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-meta">
+                                <span class="project-badge">Frontend Clone</span>
+                                <div class="project-tech-badges">
+                                    <span>React.js</span>
+                                    <span>GSAP</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>Three.js</span>
+                                </div>
+                            </div>
+                            <h3 class="project-title">iPhone Website Clone</h3>
+                            <p class="project-desc">
+                                A high-fidelity, interactive replica of the Apple iPhone product page. Features smooth
+                                scroll-triggered animations, interactive 3D models, and premium UI elements built with
+                                React and GSAP.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link disabled">
+                                    In Production <i class="fa-solid fa-lock"></i>
+                                </a>
+                                <a href="https://github.com/mdsohail786" target="_blank" rel="noopener noreferrer"
+                                    class="btn-link secondary">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: PropertyBricks -->
+                    <!-- <article class="project-card spotlight-card">
+                        <div class="project-visual">
+                            <img src="project images/E-commerce website.png" alt="PropertyBricks Screenshot"
+                                class="project-img">
+                            <div class="project-visual-glow"></div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-meta">
+                                <span class="project-badge">Full Stack App</span>
+                                <div class="project-tech-badges">
+                                    <span>React.js</span>
+                                    <span>Tailwind CSS</span>
+                                    <span>Supabase</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                            <h3 class="project-title">PropertyBricks</h3>
+                            <p class="project-desc">
+                                A modern real-estate application featuring real-time listings, Google Maps layout
+                                coordination, user profile logins, property listings uploads, and structured queries
+                                leveraging a Supabase backend.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link disabled">
+                                    Demo Pending <i class="fa-solid fa-lock"></i>
+                                </a>
+                                <a href="https://github.com/mdsohail786" target="_blank" rel="noopener noreferrer"
+                                    class="btn-link secondary">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article> -->
+
+                    <!-- Project 4: Ruksana Collection -->
+                    <article class="project-card spotlight-card">
+                        <div class="project-visual">
+                            <img src="project images/E-commerce web.png" alt="Ruksana Collection Screenshot"
+                                class="project-img">
+                            <div class="project-visual-glow"></div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-meta">
+                                <span class="project-badge">E-Commerce Frontend</span>
+                                <div class="project-tech-badges">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Responsive</span>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Ruksana Collection</h3>
+                            <p class="project-desc">
+                                A comprehensive, responsive e-commerce storefront landing design built with vanilla
+                                technologies. Focuses on animations, product details carousels, dynamic cart additions,
+                                and filtering logic without libraries.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="btn-link disabled">
+                                    Local Run <i class="fa-solid fa-circle-play"></i>
+                                </a>
+                                <a href="https://github.com/mdsohail786" target="_blank" rel="noopener noreferrer"
+                                    class="btn-link secondary">
+                                    GitHub <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Career Path</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="experience-container">
+                    <div class="experience-card spotlight-card">
+                        <div class="exp-marker"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="exp-header">
+                            <div class="exp-title-role">
+                                <h3>Front-end Developer</h3>
+                                <h4 class="text-cyan">Lovosis Technology Pvt Ltd</h4>
+                            </div>
+                            <div class="exp-date">
+                                <span>May 2025 – June 2026</span>
+                            </div>
+                        </div>
+                        <div class="exp-body">
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right text-accent"></i>
+                                    <span>Developed and maintained responsive, user-friendly web applications using
+                                        HTML5, CSS3, JavaScript, React.js, and Tailwind CSS.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right text-accent"></i>
+                                    <span>Built reusable UI components and optimized front-end architecture to improve
+                                        scalability, maintainability, and development speed.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right text-accent"></i>
+                                    <span>Collaborated with designers and cross-functional teams to translate UI/UX
+                                        designs into clean, accessible, and high-performance interfaces.</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-chevron-right text-accent"></i>
+                                    <span>Improved cross-browser compatibility and responsive layouts to ensure
+                                        consistent performance across desktop, tablet, and mobile devices.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Milestones</span>
+                    <h2 class="section-title">Education Timeline</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Education Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024 – 2025</div>
+                        <div class="timeline-content spotlight-card">
+                            <h3>Java Full Stack Development</h3>
+                            <h4 class="text-cyan">Besant Technologies</h4>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2020 – 2024</div>
+                        <div class="timeline-content spotlight-card">
+                            <h3>B.E. Computer Science Engineering</h3>
+                            <h4 class="text-pink">Khaja Bandanawaz University (KBNU)</h4>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019 – 2020</div>
+                        <div class="timeline-content spotlight-card">
+                            <h3>Pre-University Course (PUC)</h3>
+                            <h4 class="text-accent">Syed Barey PU College of Science</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Achievements</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="certifications-grid">
+                    <div class="cert-card spotlight-card">
+                        <div class="cert-icon"><i class="fa-solid fa-certificate text-cyan"></i></div>
+                        <div class="cert-content">
+                            <h3>Java Full Stack Development</h3>
+                            <p class="cert-issuer">Besant Technologies</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+                    <div class="cert-card spotlight-card">
+                        <div class="cert-icon"><i class="fa-solid fa-award text-pink"></i></div>
+                        <div class="cert-content">
+                            <h3>Front-end Web Development</h3>
+                            <p class="cert-issuer">Udemy</p>
+                            <span class="cert-date">2024</span>
+                        </div>
+                    </div>
+                    <div class="cert-card spotlight-card">
+                        <div class="cert-icon"><i class="fa-solid fa-medal text-yellow"></i></div>
+                        <div class="cert-content">
+                            <h3>React Advanced Patterns</h3>
+                            <p class="cert-issuer">Coursera</p>
+                            <span class="cert-date">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Contact Information -->
+                    <div class="contact-info-panel">
+                        <h3 class="contact-heading">Let's build something amazing together</h3>
+                        <p class="contact-subtext">
+                            I am open to full-time roles, freelance projects, and collaborations. Feel free to contact
+                            me via email, phone, or connect through social media!
+                        </p>
+
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item spotlight-card">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope text-cyan"></i></div>
+                                <div class="detail-text">
+                                    <span>Email</span>
+                                    <a href="mailto:mdsohail7862002@gmail.com">mdsohail7862002@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item spotlight-card">
+                                <div class="detail-icon"><i class="fa-solid fa-phone text-pink"></i></div>
+                                <div class="detail-text">
+                                    <span>Phone</span>
+                                    <a href="tel:+917338151217">+91 7338151217 </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item spotlight-card">
+                                <div class="detail-icon"><i class="fa-brands fa-linkedin text-accent"></i></div>
+                                <div class="detail-text">
+                                    <span>LinkedIn</span>
+                                    <a href="https://linkedin.com" target="_blank"
+                                        rel="noopener noreferrer">md-sohail-dev</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item spotlight-card">
+                                <div class="detail-icon"><i class="fa-brands fa-github text-yellow"></i></div>
+                                <div class="detail-text">
+                                    <span>GitHub</span>
+                                    <a href="https://github.com/Shaikh-Sohail991" target="_blank"
+                                        rel="noopener noreferrer">Shaikh-Sohail991</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel spotlight-card">
+                        <form id="contact-form" action="#" class="modern-form">
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="form-name">Name</label>
+                                    <div class="input-wrapper">
+                                        <input type="text" id="form-name" placeholder="John Doe" required>
+                                        <span class="focus-line"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                    <span class="focus-line"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <div class="input-wrapper">
+                                    <textarea id="form-message" rows="5"
+                                        placeholder="Tell me about your project or opportunity..." required></textarea>
+                                    <span class="focus-line"></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="form-feedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Md Sohail. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
