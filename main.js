@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loopDeleting();
     }
 
-    // Trigger typing loop
-    setTimeout(typingEffect, 1000);
+    // Trigger deleting loop first since HTML already has the first word
+    setTimeout(deletingEffect, 2200);
 
 
     /* ----------------------------------------------------
